@@ -13,6 +13,12 @@ Run via a `docker` `ENTRYPOINT` check: <https://phoenixnap.com/kb/docker-cmd-vs-
 docker run quay.io/ibm-advocados/docker-istio-knative:latest "APIKEY" "CLUSTER"
 ```
 
+## Official Doc on Installing Istio
+[Installing Istio of Knative](https://knative.dev/docs/install/installing-istio/)
+
+## Configuring DNS
+[Official Doc](https://knative.dev/docs/install/installing-istio/#configuring-dns)
+
 ## License & Authors
 
 If you would like to see the detailed LICENCE click [here](./LICENCE).
