@@ -14,7 +14,7 @@ ibmcloud config --check-version=false
 
 WORKDIR /opt/
 RUN curl -L https://istio.io/downloadIstio | ISTIO_VERSION=${ISTIO_VERSION} sh - && \
-echo 'PATH="$PATH:/opt/istio-${ISTIO_VERSION}/bin"' >> /root/.bashrc
+echo 'export PATH=$PATH:/opt/istio-${ISTIO_VERSION}/bin' >> /root/.bashrc
 
 WORKDIR /
 RUN mkdir /scripts
