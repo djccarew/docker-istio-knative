@@ -1,5 +1,5 @@
 FROM fedora:latest
-
+ARG ISTIO_VERSION=1.7.2
 RUN dnf upgrade -y
 RUN dnf install -y \
     wget \
@@ -13,8 +13,8 @@ RUN curl -fsSL https://clis.cloud.ibm.com/install/linux | sh && \
 ibmcloud config --check-version=false
 
 WORKDIR /opt/
-RUN curl -L https://istio.io/downloadIstio | sh - && \
-echo 'PATH="$PATH:/opt/istio-1.7.0/bin"' >> /root/.bashrc
+RUN curl -L https://istio.io/downloadIstio | ISTIO_VERSION=${ISTIO_VERSION} sh - && \
+echo 'PATH="$PATH:/opt/istio-${ISTIO_VERSION}/bin"' >> /root/.bashrc
 
 WORKDIR /
 RUN mkdir /scripts
