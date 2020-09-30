@@ -13,8 +13,7 @@ RUN curl -fsSL https://clis.cloud.ibm.com/install/linux | sh && \
 ibmcloud config --check-version=false
 
 WORKDIR /opt/
-RUN curl -L https://istio.io/downloadIstio | ISTIO_VERSION=${ISTIO_VERSION} sh - && \
-echo 'export PATH=$PATH:/opt/istio-${ISTIO_VERSION}/bin' >> /root/.bashrc
+RUN curl -L https://istio.io/downloadIstio | ISTIO_VERSION=${ISTIO_VERSION} sh -
 
 WORKDIR /
 RUN mkdir /scripts
