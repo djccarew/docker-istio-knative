@@ -1,6 +1,6 @@
 #!/bin/bash
 
-ISTIO_VERSION="1.7.0"
+ISTIO_VERSION="1.7.2"
 
 ibmcloud plugin install -f kubernetes-service
 sleep 20
